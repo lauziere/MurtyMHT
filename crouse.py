@@ -257,6 +257,7 @@ class MurtyData:
 
             if splitHyp.gainFull != -1:
                 splitList.insert(splitHyp,1)
+                # print('**', splitHyp.gainFull, splitHyp.forbiddenActiveCol)
             else:
                 del splitHyp
 
@@ -441,6 +442,7 @@ def kBest2DAssign(*args):
     if maximize:
         gainBest = -gainBest + CDelta*numRow
     else:
+        # print(gainBest, CDelta, numRow)
         gainBest = gainBest+CDelta*numRow
 
     if didFlip:
